@@ -1,0 +1,18 @@
+# head relation tail
+animal,associated,bird
+animal,associated,mammal
+mammal,associated,human
+mammal,associated,canine
+mammal,associated,feline
+human,associated,man
+human,associated,woman
+canine,associated,dog
+feline,associated,cat
+bird,associated,duck
+woman,associated,Mary
+man,associated,Bob
+woman,associated,Janet
+woman,associated,Jane
+cat,associated,Pookie
+duck,associated,Daffy
+man,associated,John

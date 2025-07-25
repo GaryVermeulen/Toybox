@@ -1,0 +1,7 @@
+# head    relation       tail
+device,associated,instrument
+device,associated,computer
+device,associated,machine
+machine,associated,vechile
+computer,associated,SimpleTon
+instrument,associated,telescope
