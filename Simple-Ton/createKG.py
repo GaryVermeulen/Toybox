@@ -12,8 +12,8 @@ lt_inputFileAdd = "inputData/lt_head_relation_tail_add.txt"
 lt_AttribFile = "inputData/lt_node_attributes.txt"
 nlt_inputFile = "inputData/nlt_head_relation_tail.txt"
 
-inputLTG = "kg-LTG.gml"
-inputnLTG = "kg-nLTG.gml"
+inputLTG = "processedData/kg-LTG.gml"
+inputnLTG = "processedData/kg-nLTG.gml"
 
 def getInput(inputFile):
 
@@ -133,6 +133,37 @@ def getRoot(G):
     return None
 
 
+def loadKG():
+
+    # Check for existing graph file(s)
+    LTG, nLTG = loadGraph()
+
+    if LTG == None:
+        # Construct living things graph
+        #
+        h, r, t = getInput(lt_inputFile)
+        df = pd.DataFrame({'head': h, 'relation': r, 'tail': t})
+        LTG = nx.DiGraph(name="LivingThings")
+        for _, row in df.iterrows():
+            LTG.add_edge(row['head'], row['tail'], label=row['relation'])
+
+        # Add attributes
+        node, attribName, attribValue = getInput(lt_AttribFile)
+        for n, name, value in zip(node, attribName, attribValue):
+            LTG.nodes[n][name] = value
+
+    if nLTG == None:
+        # Construct non-living things graph
+        #
+        h, r, t = getInput(nlt_inputFile)
+        df = pd.DataFrame({'head': h, 'relation': r, 'tail': t})
+        nLTG = nx.DiGraph(name="nonLivingThings")
+        for _, row in df.iterrows():
+            nLTG.add_edge(row['head'], row['tail'], label=row['relation'])
+    
+    return LTG, nLTG
+
+
 def addFile(G):
     if G == None:
         print("No Graph to add to...Exiting.")
@@ -145,6 +176,13 @@ def addFile(G):
 
 if __name__ == "__main__":
 
+    LTG, nLTG = loadKG()
+
+    plotG(LTG)
+
+    plotG(nLTG)
+
+    """
     # Check for existing graph file(s)
     LTG, nLTG = loadGraph()
 
@@ -214,3 +252,4 @@ if __name__ == "__main__":
         nx.write_gml(LTG, "kg7-LTG.gml")
         nx.write_gml(nLTG, "kg7-nLTG.gml")
         print("Files saved.")    
+    """
