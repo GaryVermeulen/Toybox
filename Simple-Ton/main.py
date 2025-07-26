@@ -5,6 +5,7 @@
 
 from createKG import loadKG
 from createKG import plotG
+from processInput import processUserInput
 
 
 if __name__ == "__main__":
@@ -13,5 +14,10 @@ if __name__ == "__main__":
 
     plotG(LTG)
     plotG(nLTG)
+
+    inputSentObj = processUserInput()
+    
+    if inputSentObj != None:
+        inputSentObj.printAll()
 
     
