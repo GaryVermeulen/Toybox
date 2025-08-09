@@ -11,18 +11,17 @@ def processUserInput():
     # Rudimentary input processing
     inSentObj = None
     
-    while True:
-        print('-' * 10)
-        uI = input('Please enter a sentence: ')
+    
+    print('-' * 10)
+    uI = input('Please enter a sentence: ')
 
-        if uI == '':
-            print('Exiting...')
-            break
-        else:
-            print("Echo: ", uI)
+    if uI == '':
+        print('Exiting...')
+        return None
+    else:
+        print("Echo: ", uI)
         print('-' * 10)
         print('Processing user input...')
-        
         
         uI = uI.rstrip(punctuation)
         taggedInput = expandAndTag(uI)
