@@ -23,10 +23,8 @@ def processUserInput():
         print('-' * 10)
         print('Processing user input...')
         
-        uI = uI.rstrip(punctuation)
+        uI = uI.rstrip(punctuation) # We may need to retain punctuation
         taggedInput = expandAndTag(uI)
-        print('taggedInput: ', taggedInput)
-
         inSentObj = inputSentence(uI, taggedInput, [])
         
     print('-' * 30)

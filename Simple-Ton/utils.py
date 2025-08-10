@@ -117,10 +117,20 @@ def checkDictionary(inputSentObj):
                         print('...')
                         print(j[0])
                         print(j[1])
-                        
-            
-
     return wordDef
+
+
+def getCFGRules():
+
+    rules = ''
+    #file = 'cfg_rules.cfg'
+    file = 'simp.cfg'
+
+    rf = open(file, 'r') # Get base rules
+    rules = rf.read()
+    rf.close()
+    
+    return(rules)
 
 
 

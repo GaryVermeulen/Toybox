@@ -1,4 +1,3 @@
-#
 # expandAndTag.py
 #
 # Take input sentence and
@@ -6,148 +5,123 @@
 # Ex: I'd can be I would or I had
 #
 
-##import spacy # spacy is a pig and is not compatible with KG's (numpy)
 import nltk
 from nltk.tag import pos_tag
 
-from config import very_simple_contractions
+from expandSentence import expandSentence as es
 
-##nlp = spacy.load("en_core_web_sm") # lg has best accuracy
-##nlp = spacy.load("en_core_web_lg")
+
+def simpleVerbCheck(tagSent1, tagSent2):
+
+    sent = []
+    v1 = []
+    vM1 = []
+    v2 = []
+    vM2 = []
+    vbAll     = {'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}
+    vbPresent = {'VB', 'VBG', 'VBP', 'VBZ'}
+    vbPast    = {'VBD', 'VBD', 'VBN'}
+
+    for w in tagSent1:
+        if w[1] in vbAll:
+            v1.append(w)
+
+    for w in tagSent2:
+        if w[1] in vbAll:
+            v2.append(w)
+
+    print('1 verbs: ', v1)
+    print('2 verbs: ', v2)
+
+    for v in v1:
+        print("checking 1: ", v)
+        if v[1] in vbPresent:
+            print(f"{v} Match present {vbPresent}")
+            vM1.append(1)
+        elif v[1] in vbPast:
+            vM1.append(2)
+            print(f"{v} Match past {vbPast}")
+        else:
+            vM1.append(3)
+            print(f"{v} No match ")
+    print(vM1)
+    vM1Result = all(x == vM1[0] for x in vM1)
+    print(vM1Result)
+    print('---------')
+    for v in v2:
+        print("checking 2: ", v)
+        if v[1] in vbPresent:
+            print("Match present ", v)
+            vM2.append(1)
+        elif v[1] in vbPast:
+            print("Match past ", v)
+            vM2.append(2)
+        else:
+            print("No match ", v)
+            vM2.append(3)
+    print(vM2)
+    vM2Result = all(x == vM2[0] for x in vM2)
+    print(vM2Result)
+
+    if vM1Result:
+        return tagSent1
+    elif vM2Result:
+        return tagSent2
+    else:
+        return None
 
 def expandAndTag(inputSentence):
 
     expandedSentence = []
-    verySimple = False
-
-#    print('Start expandAndTag...')
-#    print('type inputSentence: ', type(inputSentence))
-#    print(inputSentence)
-#    print('---')
-
+    tagSent1 = []
+    tagSent2 = []
+    simple = False
+    
     if len(inputSentence) == 0:
         return ['Error: input len 0']
 
-    #print('START -- expandAndTag --')
-
+    
     if inputSentence.find("'") != -1: # Possible contraction
-        tmpSent = inputSentence.split()
-        for w in tmpSent:
-            
-            w = w.strip()
 
-            #print('w: ', w)
-            
-            if w.find("'") != -1: # Doesn't handle idioms such as: someone's
-                if w in very_simple_contractions.keys():
-                    result = very_simple_contractions[w]
-                    resultList = result.split()
-                    verySimple = True
-                    for r in resultList:
-                        expandedSentence.append(r)
-                else:
-                    #print('else-w: ', w)
-                    verySimple = False
-                    expandedSentence.append(w)
+        eS1, eS2 = es(inputSentence)
 
-            else:
-                expandedSentence.append(w)
+        print('+++++')
+        print(type(eS1))
+        print(eS1)
 
-        #print('expandedSentence:')
-        #print(expandedSentence)
+        
+        if len(eS2) > 0:
+            tagSent2 = pos_tag(eS2)
+        tagSent1 = pos_tag(eS1)
+        
+        print("tagSent1:")
+        print(tagSent1)
+        print("tagSent2:")
+        print(tagSent2)
 
-        ##doc = nlp(' '.join(expandedSentence))
-        tagSent = pos_tag(expandedSentence)
-        print("tagSent:")
-        print(tagSent)
-        """
-        tagSent = []
-        for token in doc:
-            tmpToken = ((str(token.text)), (str(token.tag_)))
-            tagSent.append(tmpToken)
-        """    
-        #print('if tagSent:')
-        #print(tagSent)
+        # Determine correct sentence
+        print("WHICH ONE?")
+        tagSent1 = simpleVerbCheck(tagSent1, tagSent2)
 
-        idx = 0
-        if not verySimple:
-            newTagSent = []
-            #print('not simple')
-            for w in tagSent:
-                if w[0] == "'d":
-                    #print('found d')
-                    #print('w: ', w)
-                    #print('idx: ', idx)
-                    #print('tagSent[idx + 1]: ', tagSent[idx + 1])
-                    if tagSent[idx + 1][1] in [rb, vbn, jj]:
-                        w = ("had", vbd)
-                    #    print('new had w: ', w)
-                    else:
-                        w = ("would", "MD")
-                    #    print('new would w: ', w)
-                        
-                newTagSent.append(w)
-                idx += 1
-
-            #print('newTagSent:')
-            #print(newTagSent)
-            
-            tagSent = newTagSent
-
+        print("This one:")
+        print(tagSent1)
+        
     else: # No ' in sentence, so just tag it
-        ##doc = nlp(inputSentence)
 
-        tagSent = pos_tag(inputSentence.split())
-        print("tagSent:")
-        print(tagSent)
-        """
-        tagSent = []
-        for token in tagged_words:
-            tmpToken = ((str(token.text)), (str(token.tag_)))
-            tagSent.append(tmpToken)
-        """ 
-#        print('else tagSent:')
-#        print(tagSent)
+        
+
+        tagSent1 = pos_tag(inputSentence.split())
+        print("tagSent1:")
+        print(tagSent1)
     
-    #print('END -- expandAndTag --')
-    
-    return tagSent
+    return tagSent1
 
 #
 if __name__ == "__main__":
 
     print('START -- expandAndTag -- main --')
 
-    inputSentence = ''
-    
-    #inputSentence = "I'd never bused so many dishes in one night"
-    # [('I', 'PRP'), ('had', 'VBD'), ('never', 'RB'), ('bused', 'VBN'), ('so', 'RB'), ('many', 'JJ'), ('dishes', 'NNS'), ('in', 'IN'), ('one', 'CD'), ('night', 'NN')]
-    #
-    #inputSentence = "I wish I'd waited longer"
-    # [('I', 'PRP'), ('wish', 'VBP'), ('I', 'PRP'), ('had', 'VBD'), ('waited', 'VBN'), ('longer', 'RBR')]
-    #
-    #inputSentence = "He'd gone home"
-    # [('He', 'PRP'), ('had', 'VBD'), ('gone', 'VBN'), ('home', 'RB')]
-    #
-    #inputSentence = "She'd just spoken to her"
-    # [('She', 'PRP'), ('had', 'VBD'), ('just', 'RB'), ('spoken', 'VBN'), ('to', 'IN'), ('her', 'PRP')]
-    
-    #inputSentence = "I'd like some tea"
-    # [('I', 'PRP'), ('would', 'MD'), ('like', 'VB'), ('some', 'DT'), ('tea', 'NN')]
-    #
-    #
-    #inputSentence = "I'd have gone if I had had time"
-    # [('I', 'PRP'), ('would', 'MD'), ('have', 'VB'), ('gone', 'VBN'), ('if', 'IN'), ('I', 'PRP'), ('had', 'VBD'), ('had', 'VBN'), ('time', 'NN')]
-    #
-    #inputSentence = "He'd have been 70 today"
-    # [('He', 'PRP'), ('would', 'MD'), ('have', 'VB'), ('been', 'VBN'), ('70', 'CD'), ('today', 'NN')]
-
-    #inputSentence = "I'll see you tomorrow"
-    # [('I', 'PRP'), ('will', 'MD'), ('see', 'VB'), ('you', 'PRP'), ('tomorrow', 'NN')]
-
-    #inputSentence = "I thought love was only true in fairy tales"
-    # [('I', 'PRP'), ('thought', 'VBD'), ('love', 'NN'), ('was', 'VBD'), ('only', 'RB'), ('true', 'JJ'), ('in', 'IN'), ('fairy', 'NN'), ('tales', 'NNS')]
-
+    """
     print('inputSentence:')
     print(inputSentence)
 
@@ -155,7 +129,7 @@ if __name__ == "__main__":
 
     print('expandedSentence:')
     print(expandedSentence)
-
+    """
     print('END -- expandAndTag -- main --')    
     
     
