@@ -1,0 +1,26 @@
+# Test sentences
+#
+I'll check if he's done with the work
+[('I', 'PRP'), ('will', 'MD'), ('check', 'VB'), ('if', 'IN'), ('he', 'PRP'), ('is', 'VBZ'), ('done', 'VBN'), ('with', 'IN'), ('the', 'DT'), ('work', 'NN')]
+[('I', 'PRP'), ('will', 'MD'), ('check', 'VB'), ('if', 'IN'), ('he', 'PRP'), ('has', 'VBZ'), ('done', 'VBN'), ('with', 'IN'), ('the', 'DT'), ('work', 'NN')]
+#
+I'll check if he's done the work
+[('I', 'PRP'), ('will', 'MD'), ('check', 'VB'), ('if', 'IN'), ('he', 'PRP'), ('is', 'VBZ'), ('done', 'VBN'), ('the', 'DT'), ('work', 'NN')]
+[('I', 'PRP'), ('will', 'MD'), ('check', 'VB'), ('if', 'IN'), ('he', 'PRP'), ('has', 'VBZ'), ('done', 'VBN'), ('the', 'DT'), ('work', 'NN')]
+#
+I'll check if he's done all the work
+[('I', 'PRP'), ('will', 'MD'), ('check', 'VB'), ('if', 'IN'), ('he', 'PRP'), ('is', 'VBZ'), ('done', 'VBN'), ('all', 'PDT'), ('the', 'DT'), ('work', 'NN')]
+[('I', 'PRP'), ('will', 'MD'), ('check', 'VB'), ('if', 'IN'), ('he', 'PRP'), ('has', 'VBZ'), ('done', 'VBN'), ('all', 'PDT'), ('the', 'DT'), ('work', 'NN')]
+#
+The dog ate its food
+[('The', 'DT'), ('dog', 'NN'), ('ate', 'VB'), ('its', 'PRP$'), ('food', 'NN')]
+#
+He'd go but he's broke
+[('He', 'PRP'), ('would', 'MD'), ('go', 'VB'), ('but', 'CC'), ('he', 'PRP'), ('is', 'VBZ'), ('broke', 'JJ')]
+[('He', 'PRP'), ('had', 'VBD'), ('go', 'VB'), ('but', 'CC'), ('he', 'PRP'), ('has', 'VBZ'), ('broke', 'NN')]
+#
+I'd've gone to the store, but I didn't have the time
+[('I', 'PRP'), ('would', 'MD'), ('have', 'VB'), ('gone', 'VBN'), ('to', 'TO'), ('the', 'DT'), ('store', 'NN'), ('but', 'CC'), ('I', 'PRP'), ('did', 'VBD'), ('not', 'RB'), ('have', 'VB'), ('the', 'DT'), ('time', 'NN')]
+#
+He couldn't've known the answer, it was too difficult
+[('He', 'PRP'), ('could', 'MD'), ('not', 'RB'), ('have', 'VB'), ('known', 'VBN'), ('the', 'DT'), ('answer', 'NN'), ('it', 'PRP'), ('was', 'VBD'), ('too', 'RB'), ('difficult', 'JJ')]

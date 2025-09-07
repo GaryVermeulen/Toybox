@@ -22,7 +22,10 @@ if __name__ == "__main__":
         print(k[0])
         print(len(k[1]))
 
-    print(sDict[0][1][0])
+    #print(sDict[0][1][0])
+    print(sDict[0])
+
+    
         
 
 

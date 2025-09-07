@@ -1,12 +1,14 @@
 # buildDictionary.py
 # Build dictionary from raw input.
 # New: 8/3/25
+# Rev: 8/24/25; Also create MongoDB
 #
 import os
 import sys
 #import csv
 import string
 import pickle
+from utils import connectMongo, readDictionary
 
 sDictionary = '/home/gary/src/Simple-Ton/processedData/sDictionary.p'
 
@@ -63,20 +65,29 @@ if __name__ == "__main__":
     
     c = getRawCorpus()
 
+    print('----- c:')
     print(type(c))
     print(len(c))
     for i in c:
-        print(i[0])
-    
+        print('i[0] (in c): ', i[0])
+
+    print('----- c[0]:')
     print(type(c[0]))
     print(len(c[0]))
     
+    print('-----len, type, c[0][0]:')
+    print(len(c[0][1]))
+    print(type(c[0][1]))
     print(c[0][0])
+    
+    print('----- len & type c[0][1]:')
     print(len(c[0][1]))
     print(type(c[0][1]))
 
+    print('----- len & type c[0][1][0]:')
     print(len(c[0][1][0]))
     print(type(c[0][1][0]))
+    print(c[0][1][0])
     """
     for i in c[0][1]:
         
@@ -89,4 +100,10 @@ if __name__ == "__main__":
     print('Saving Dictionary data to pickle...')
     with open(sDictionary, "wb") as f:
         pickle.dump(c, f)
+
+    testWord = "goat"
+
+    wordDef = readDictionary(testWord)
+    print(f'-------- {testWord}: wordDef:')
+    print(wordDef)
     

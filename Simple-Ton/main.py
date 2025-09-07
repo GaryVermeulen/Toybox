@@ -7,7 +7,7 @@ import sys
 from createKG import loadKG
 from createKG import plotG
 from processInput import processUserInput
-from utils import checkDictionary, searchKG, searchMongoWiki
+from utils import checkWordNet, checkMongoDictionary, searchKG, searchMongoWiki
 
 
 def getUnknowns(inputSentObj):
@@ -29,22 +29,32 @@ if __name__ == "__main__":
     #plotG(LTG)
     #plotG(nLTG)
 
-    # Get input from user
+    # Get input from user, expand contractions, and POS tag
     inputSentObj = processUserInput()
     
     if inputSentObj != None:
-        print('---- inputSentObj !- None:')
+        print('---- inputSentObj:')
         inputSentObj.printAll()
 
-        sys.exit("Debug Stop/exit...")
+        #sys.exit("Debug Stop/exit...")
         
-        # Check tagging ex: mongo is not a JJ and
-        # hello should be an INTJ (interjection).
-        # Oh joy, let's learn the English language...
-        print('---- Spelling and grammar:')
-        x = checkDictionary(inputSentObj)
+        print('---- checkMongoDictionary:')
+        mongoDef = checkMongoDictionary(inputSentObj)
 
-        
+        for d in mongoDef:
+            print("d: ")
+            print(d)
+
+        print('---- checkWordNet:')
+        synsets = checkWordNet(inputSentObj)
+
+        for s in synsets:
+            print('s:')
+            print(s)
+
+        print('------------')
+        print(inputSentObj.rawSent)
+        sys.exit("Debug Stop/exit...")
         
         print('---- start searchKB:')
         searchKG(LTG, inputSentObj)
