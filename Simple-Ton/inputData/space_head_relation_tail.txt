@@ -1,7 +1,0 @@
-# head    relation       tail
-space,associated,universe
-universe,associated,galaxy
-galaxy,associated,star
-star,associated,planet
-planet,associated,earth
-earth,associated,park
