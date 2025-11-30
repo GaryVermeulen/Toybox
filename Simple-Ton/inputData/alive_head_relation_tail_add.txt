@@ -1,0 +1,7 @@
+# head relation tail
+mammal,associated,bat
+mammal,associated,cow
+bird,associated,goose
+animal,associated,reptile
+reptile,associated,turtle
+turtle,associated,Tooter

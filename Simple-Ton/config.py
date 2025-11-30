@@ -1,0 +1,85 @@
+# config.py
+# Rewrite of commonConfig.py
+# New: 7/26/25; Mod: 11/28/25
+#
+
+# NLTK POS tags
+
+# Adjective tags
+jjAll = {'JJ', 'JJR', 'JJS'}
+
+# Noun tags
+nnAll = {'NN', 'NNP', 'NNPS', 'NNS'}
+
+# Pronoun tags
+prpAll = {'PRP', 'PRP$'}
+
+# Verb tags
+vbAll     = {'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}
+vbPresent = {'VB', 'VBG', 'VBP', 'VBZ'}
+vbPast    = {'VBD', 'VBD', 'VBN'}
+
+# Adverb tags
+rbAll = {'RB', 'RBR', 'RBS'}
+
+
+# Dictionary PoS common abbreviations
+posAbbreviations = {
+    "n.": "NN",
+    "v.": "VB",
+    "p.p.": "VBN",
+    "a.": "JJ",
+    "adj.": "JJ",
+    "adv.": "RB",
+    "pron.": "PRP",
+    "prep.": "IN",
+    "conj.": "CC",
+    "interj.": "UH"
+    }
+
+
+# Crude class for sentences
+#
+class inputSentence:
+
+    def __init__(self, rawSent, taggedSent, taggingErrors, kgData, synsets, dictionaryData):
+        self.rawSent        = rawSent
+        self.taggedSent     = taggedSent
+        self.taggingErrors  = taggingErrors
+        self.kgData         = kgData
+        self.synsets        = synsets
+        self.dictionaryData = dictionaryData
+
+    def printAll(self):
+        print('rawSent:        ', self.rawSent)
+        print('taggedSent:     ', self.taggedSent)
+        print('taggingErrors:  ', self.taggingErrors)
+        print('kgData:         ', self.kgData)
+        print('synsets:        ', self.synsets)
+        print('dictionaryData: ', self.dictionaryData)
+
+    def printFull(self):
+        print('rawSent:        ', self.rawSent)
+        print('taggedSent:     ', self.taggedSent)
+        print('----------------')
+        print('taggingErrors:')
+        for item in self.taggingErrors:
+            print(item)
+        print('----------------')
+        print('kgData:')
+        for item in self.kgData:
+            print(item)
+        print('----------------')
+        print('syssets:')
+        for item in self.synsets:
+            print(item)
+        print('----------------')
+        print('dictionaryData:')
+        for item in self.dictionaryData:
+            print(item)
+        
+            
+        
+    
+
+

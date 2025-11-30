@@ -1,0 +1,4 @@
+# Node attributes
+# node, attribute name, attribute value
+Mary,Age,29
+Bob,Age,30
