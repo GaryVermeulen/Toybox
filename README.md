@@ -1,1 +1,1 @@
-Toy AI hobby fun.
+Code Toys.
