@@ -1,0 +1,33 @@
+----------
+lineCnt == 2: line:
+Pab`u*la"tion, n. [L. pabulatio, fr. pabulari to feed, fr. pabulum
+No Etym:
+pos2Chk:  fr.
+pos:  Unknown
+['fr.', 'Unknown']
+...
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/idlelib/run.py", line 580, in runcode
+    exec(code, self.locals)
+  File "/home/gary/src/Simple-Ton/buildDictionary5.py", line 245, in <module>
+    unknowns = buildMongoCollection(wordDefBlocks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gary/src/Simple-Ton/buildDictionary5.py", line 215, in buildMongoCollection
+    x = collection.insert_one(wordDef)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gary/.local/lib/python3.12/site-packages/pymongo/synchronous/collection.py", line 891, in insert_one
+    self._insert_one(
+  File "/home/gary/.local/lib/python3.12/site-packages/pymongo/synchronous/collection.py", line 831, in _insert_one
+    self._database.client._retryable_write(
+  File "/home/gary/.local/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 2061, in _retryable_write
+    return self._retry_with_session(retryable, func, s, bulk, operation, operation_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gary/.local/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 1947, in _retry_with_session
+    return self._retry_internal(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gary/.local/lib/python3.12/site-packages/pymongo/_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gary/.local/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ^^^^^

@@ -1,0 +1,101 @@
+2026/01/17 09:26:38 [14223] building file list
+2026/01/17 09:26:38 [14223] .d..tp..... ./
+2026/01/17 09:26:38 [14223] >f+++++++++ BackupUsing_rsync_Over_ssh.txt
+2026/01/17 09:26:38 [14223] >f+++++++++ rsync-P3-home2log.txt
+2026/01/17 09:26:38 [14223] >f+++++++++ rsync-home2log.txt
+2026/01/17 09:26:38 [14223] >f+++++++++ runCell.sh
+2026/01/17 09:26:38 [14223] >f+++++++++ startMongo.txt
+2026/01/17 09:26:38 [14223] cd+++++++++ Desktop/
+2026/01/17 09:26:38 [14223] >f+++++++++ Desktop/rsync-home2log.txt
+2026/01/17 09:26:38 [14223] cd+++++++++ Documents/
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Be glad what you is not.txt
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/WilliamWhewell.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/truth emerges more easily.txt
+2026/01/17 09:26:38 [14223] cd+++++++++ Documents/GV/
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/GV/2024FedTaxPg1.jpg
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/GV/ClaimScan.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/GV/GaryNameSearch.jpg
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/GV/GaryVermeulenODL-Back.jpg
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/GV/GaryVermeulenODL-Front.jpg
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/GV/GaryVermeulenSSN.jpg
+2026/01/17 09:26:38 [14223] cd+++++++++ Documents/Trust2025/
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Advance Directives.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Assignment.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Certification of Trust.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Conflict Memorandum.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Deed.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/First and Signature Pages.Vermeulen-Moshofsky Trust.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Hipa Statements.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Pourover Wills.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Powers of Attorney.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Trust Administrationn Letter.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Documents/Trust2025/Trust.Vermeulen-Moshofsky Trust.Executed.pdf
+2026/01/17 09:26:38 [14223] cd+++++++++ Downloads/
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/17632236120243_1454485.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/2026 $500 CIGNA Summary of Benefits.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/2026 CIGNA $500 SBC.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Advance Directives.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Assignment.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/C2P-Receipt-2761928.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Certification of Trust.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Conflict Memorandum.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Deed.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Dental Base and Buy-Up.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/EN_EnrollmentsSummary_2025_11_18_060504.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/First and Signature Pages.Vermeulen-Moshofsky Trust.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Full text of _William Whewell, D.D., Master of Trinity College, Cambridge _ an account of his writings with selections from his literary and scientific correspondence_.html
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Gary-MedicalPharmacy-idcard.png
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Gemini_Generated_Image_7jbqmb7jbqmb7jbq.png
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Hipa Statements.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Important Notice.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/JANET.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/JanetMoshofskyClaimID500808802.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/OAP Flyer 965727.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Pourover Wills.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Powers of Attorney.Executed.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/TotalCompensationStatement_20260104.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Trust Administrationn Letter.pdf
+2026/01/17 09:26:38 [14223] >f+++++++++ Downloads/Trust.Vermeulen-Moshofsky Trust.Executed.pdf
+2026/01/17 09:26:39 [14223] >f+++++++++ Downloads/b24872398_0001.pdf
+2026/01/17 09:26:39 [14223] >f+++++++++ Downloads/mongodb-compass_1.46.6_amd64.deb
+2026/01/17 09:26:39 [14223] >f+++++++++ Downloads/mongodb-compass_1.48.0_amd64(1).deb
+2026/01/17 09:26:39 [14223] >f+++++++++ Downloads/mongodb-compass_1.48.0_amd64.deb
+2026/01/17 09:26:39 [14223] >f+++++++++ Downloads/mongodb-org-server-8.0.12-1.amzn2023.x86_64.rpm
+2026/01/17 09:26:39 [14223] >f+++++++++ Downloads/mongodb-org-server_8.0.12_amd64.deb
+2026/01/17 09:26:39 [14223] >f+++++++++ Downloads/mongodb-org-server_8.2.1_amd64.deb
+2026/01/17 09:26:40 [14223] >f+++++++++ Downloads/oed_2.zip
+2026/01/17 09:26:40 [14223] >f+++++++++ Downloads/pg673.txt
+2026/01/17 09:26:40 [14223] cd+++++++++ Music/
+2026/01/17 09:26:40 [14223] cd+++++++++ Music/AbbyRoad/
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/1 - Come Together (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/10 - Sun King (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/11 - Mean Mr Mustard (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/12 - Polythene Pam (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/13 - She Came In Through The Bathroom Window (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/14 - Golden Slumbers (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/15 - Carry That Weight (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/16 - The End (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/17 - Her Majesty (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/2 - Something (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/3 - Maxwell's Silver Hammer (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/4 - Oh! Darling (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/5 - Octopus's Garden (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/6 - I Want You (She's So Heavy) (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/7 - Here Comes The Sun (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/8 - Because (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/AbbyRoad/9 - You Never Give Me Your Money (Remastered 2009).mp3
+2026/01/17 09:26:40 [14223] cd+++++++++ Music/FridayMix/
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Ain't No Mountain High Enough.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Big Yellow Taxi - Joni Mitchell.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Eye In The Sky Alan Parsons Project Lyrics the best.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Jackson Browne The Load OutStay.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Janis Ian - At Seventeen (Audio).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Killing Me Softly with His Song_2.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Melanie - Lay Down (Candles in the Rain (1970).mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Phil Collins - In the Air Tonight_2.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/Supremes - Where Did Our Love Go (1964) HD 0815007.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/The Beatles - Abbey Road Medley Restored Version.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/The Pretender.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/The Ronettes - Be My Baby - Stereo.mp3
+2026/01/17 09:26:40 [14223] >f+++++++++ Music/FridayMix/The Three Degrees - When will I see you again (Ruud's Extended Mix).mp3
+
